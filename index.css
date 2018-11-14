@@ -210,11 +210,17 @@ footer{
 	background-color: #000;
 	border-color: #E04727;
 	padding: 2rem 1rem
+
 }
 
 .texto{
 	text-align: justify;
     	text-justify: inter-word;
+
+}
+
+.texto1{
+	padding-bottom: 2rem;
 }
 
 .lead{
