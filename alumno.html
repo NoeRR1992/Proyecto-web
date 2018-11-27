@@ -16,14 +16,20 @@
 				<p style="margin: 0; color:#F9F9F9;"><span style="font-family: 'Rajdhani', sans-serif; font-size: 1.5em;"> ESCOM</span>partiendo</p>
 			</div>
 			<ul>
-				<li><a href="index.html" ><p><img src="home.svg" width="30"></p></a></li>
-				<li><a href="#" ><p><img src="email.svg" width="30"> </p></a></li>
-				<li><a href="#"><p><img src="user.svg" width="30"></p></a></li>
+				<li><a href="index.html"><i class="fas fa-home" style="font-size: 30px; color: white"></i></a></li>
+				<li><a href="#"><i class="fas fa-comment" style="font-size: 30px; color: white"></i></a></li>
+				<li><a href="#"><i class="fas fa-user-circle" style="font-size: 30px; color: white"></i></a></li>
 				
 			</ul>
 			
 		</nav>
 	</header>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 	<br>
 	<br>
 	<br>
@@ -40,12 +46,49 @@
 						<span style="color:#1169a3; font-family: 'Rajdhani', sans-serif; font-size: 1.5em;">Alumno</span>
 					</h1>
 
-					<form class="justify-content-center">
-						<div class="form-group row">
+
+					<form class="justify-content-center border">
+						<div class="form-group row" style="background: #e9ecef;">
 							<div class="col-xs-2">
-								<label for="ex1">Ingresar grupo</label>
+								<label for="ex1">Ingresa grupo para registrar</label>
+								<input class="form-control" id="ex1" type="text">
+
+								<div class="col-sm-3" style="padding: 1rem;">
+									<a href="#" class="btn btn_red btn-lg" >Registrar</a>	
+								</div>
+							</div>
+
+							<div class="col-xs-2">
+								<label for="ex1">Grupos registrados</label>
+
+								<div class="col-sm-3" style="padding: 1rem;">
+									<select class="form-control" placeholder="Grupos" style="background: #e9ecef; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+										<option name="lista" value="grupo1" placeholder="Grupos">grupo 1</option>
+										<option name="lista" value="grupo2">grupo 2</option>
+									</select>	
+								</div>
+							</div>
+							
+						</div>
+						
+					</form>
+
+					<form class="justify-content-center">
+						<div class="form-group row" style=" background: #e9ecef;">
+							<div class="col-xs-2">
+								<label for="ex1">Ingresar profesor</label>
 								<input class="form-control" id="ex1" type="text">
 							</div>
+
+							<div class="col-xs-2">
+								<label for="ex1">Ingresar grupo</label>
+								<input class="form-control" id="ex2" type="text">
+							</div>
+
+							
+						</div>
+						<div class="col-sm-3">
+							<a href="#" class="btn btn_red btn-lg">Entrar</a>	
 						</div>
 					</form>
 					
@@ -58,9 +101,18 @@
 				<section class="contenedor">
 					<div class="container">
 						<h1 class="display-3">
-							<span style="color:#1169a3; font-family: 'Comic sans-serif', sans-serif; font-size: .5em;">Tecnologias para la web/2CV6</span>
+							<span style="color:#1169a3; font-family: 'Comic sans-serif', sans-serif; font-size: .5em;">Nombre del profesor/grupo</span>
 						</h1>
 					</div>
+
+					<form class="justify-content-center">
+						<div class="form-group row">
+							<div class="col-xs-2">
+								<label for="ex1"></label>
+							</div>
+						</div>
+						
+					</form>
 				</section>
 
 				<br>
@@ -68,80 +120,274 @@
 
 				<div class="botones_inicio row justify-content-around">
 					<div class="col-sm-3">
-						<a href="#alumno" class="btn btn_red btn-lg">Archivos Guardados</a>
+						<a href="archivosguardados.html" class="btn btn_red btn-lg">Buscar Archivos</a>
 					</div>
 
 					<div class="col-sm-3">
-						<a href="#alumno" class="btn btn_red btn-lg">Compartir archivo</a>	
+						<a href="#alumno" class="btn btn_red btn-lg">Subir tarea</a>	
 					</div>
-
+					<!--modal buscar grupo-->
 					<div class="col-sm-3">
-						<a href="#alumno" class="btn btn_red btn-lg">Añadir carpeta</a>	
+						<a href="#" data-toggle="modal" data-target="#exampleModal9" class="btn btn_red btn-lg" id="Buscar"> Buscar grupo</a>
+						<div class="modal fade" id="exampleModal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  						<div class="modal-dialog" role="document">
+	    						<div class="modal-content">
+		      						<div class="modal-header">
+		        						<h5 class="modal-title" id="exampleModalLabel"> Buscar grupo</h5>
+		        						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          						<span aria-hidden="true">&times;</span>
+		        						</button>
+		      						</div>
+
+		      						<div class="modal-body">
+
+		        						<form>
+				  						<div class="form-group">
+				  							<label for="exampleModalLabel">Nombre de Profesor</label>
+				  							<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >			    						
+				  						</div>
+				  						<div class="form-group">
+				    						<label for="exampleInputPassword1">Nombre del Grupo</label>
+				    						<input type="exampleModalLabel" class="form-control" id="exampleInputPassword1" >
+				
+
+				  						</div>
+				  						<button type="submit" class="btn btn-primary">Buscar</button>
+										</form>
+
+		     						</div>
+		      					
+
+	    						</div>
+	  						</div>
+						</div>
+							
 					</div>
+					<!--modal buscar grupo-->
+
+
+
+
+
 				</div>
 				
 					<br>
 					<br>
-				<div class="position-absolute" style="bottom: 20px;">
+				<!--div class="position-absolute" style="bottom: 20px;">
 					<div class="col-12 mt-5 ">
 						<a href="#profesor" class="no_link" >Bajar</a>
 					</div>
 					<div class="col-12">
 						<a href="#compartir" class="no_link"><i class="fas fa-chevron-down"></i></a>
 					</div>
-				</div>
+				</div-->
 			</div>	
 
 			<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
-				<div class="media border p-3">
-				  <div class="media-body">
-				    <h4>CSS</h4>
-				  	</div>
-				   <a href=""><img src="word.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="excel.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="powerpoint.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="mp4.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="pdf.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"></a>
-				</div>
 
-				<!---alt="John Doe"-->
-			<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------>     
-				  
-			<div class="media border p-3">
-				  <div class="media-body">
-				    <h4>HTML5</h4>
-				  	</div>
-				   <a href=""><img src="word.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="excel.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="powerpoint.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="mp4.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="pdf.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"></a>
-				</div>
+			<br>
+			<br>
+			
 
 				<!---alt="John Doe"-->
 			<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------> 
 
-			<div class="media border p-3">
-				  <div class="media-body">
-				    <h4>JAVASCRIP</h4>
-				  	</div>
-				   <a href=""><img src="word.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="excel.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="powerpoint.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="mp4.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="pdf.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"></a>
+			<div id="asignar_ua" class="solicitud mt-5">
+
+				<div class="jumbotron jumbotron-fluid w-100">
+					<div class="container justify-content-center">
+						<h2 class="display-4">Tareas pendientes</h2>
+					</div>
+					
+					<div class="container">
+
+						<div class="row justify-content-center">
+
+							<div class="col-8">
+
+								<form class="form-row justify-content-end" method="POST" >
+
+									<div class="form-group col-12">
+										<label for="">Selecciona tarea:</label>
+										<select name="profesor_prof_ua" id="profesor_prof_ua" required class="form-control">
+											<option value="">Seleciona una tarea</option>
+										</select>
+									</div>
+
+									
+
+									<input type="text" name="accion" value="asignarUA" hidden>
+
+									<div class="col-ms-6 media-body">
+										<span class="btn btn-default btn-file">
+						    				<h3 class="border p-2">Elegir archivos</h3> <input type="file">
+						    				<input classtype="file" name="mi archivo" multiple="true">
+										</span>
+									</div>
+
+									<div class="form-group">
+										<input type="submit" value="subir" class="btn btn_red" name="agregar_ua_profesor">
+									</div>
+
+								</form>
+								
+							</div>			  	
+					  		
+						  	
+						</div>
+					</div>
 				</div>
+			</div>
 
-				<!---alt="John Doe"-->
-			<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------> 
 
-			    <div class="media border p-3">
-				    <div class="media-body">
-				        <h4>BOOTTRAP</h4>
-				  	</div>
-				   <a href=""><img src="word.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="excel.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="powerpoint.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="mp4.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="pdf.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"></a>
+			<div id="asignar_ua" class="solicitud mt-5">
+
+				<div class="jumbotron jumbotron-fluid w-100">
+					<div class="container justify-content-center">
+						<h2 class="display-4">Subir tarea</h2>
+					</div>
+					
+					<div class="container">
+
+						<div class="row justify-content-center">
+
+							<div class="col-8">
+
+								<form class="form-row justify-content-end" method="POST" >
+
+									<div class="form-group col-12">
+										<textarea name="multilinea" cols="50" rows="4" placeholder="Escribe una descripción de tu tarea"></textarea>
+									</div>
+
+									
+
+									<input type="text" name="accion" value="asignarUA" hidden>
+
+									<div class="col-ms-6 media-body">
+										<span class="btn btn-default btn-file">
+						    				<h3 class="border p-2">Elegir archivos</h3> <input type="file">
+						    				<input type="file" name="mi archivo" multiple="true">
+										</span>
+									</div>
+
+									<div class="form-group">
+										<input type="submit" value="subir" class="btn btn_red" name="agregar_ua_profesor">
+									</div>
+
+								</form>
+								
+							</div>			  	
+					  		
+						  	
+						</div>
+					</div>
 				</div>
+			</div>
 
-				<!---alt="John Doe"-->
-			<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------> 
 
-			<div class="media border p-3">
-				  <div class="media-body">
-				    <h4>CSS3</h4>
-				  	</div>
-				   <a href=""><img src="word.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="excel.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="powerpoint.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="mp4.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"><img src="pdf.svg"  class="ml-3 mt-3 rounded-circle" style="width:40px;"></a>
+		
+		<div class="row">
+				<div class="col-sm-12">
+					<div class="media border p-3">
+
+						<div class="container">
+							<div class="titulo">
+								<h1 class="display-3">
+									<span style="color:#1169a3; font-family: 'Rajdhani', sans-serif; font-size: 60px;">Grupos</span>
+								</h1>
+								<br>
+								<br>
+							</div>
+						</div>
+						<!----------------------------------------------------------------------------------------------------------------------------------------->
+						
+
+							
+						
+							<br>
+							<br>
+						<!----------------------------------------------------------------------------------------------------------------------------------------->
+							<div class="col-sm-12">
+								<div class="media border p-3">
+
+								<div class="container col-sm-5">
+								<div class="titulo">
+								<h1 class="display-3">
+								<span style="color:#1169a3; font-family: 'Rajdhani', sans-serif; font-size: 40px;">GRUPO 1</span>
+								</h1> 
+								<br>
+								<br>
+								</div>
+								</div>
+
+								<div class="media-body col-sm-7">
+								     <h5 class="">
+
+								<span style="color:#1169a3; font-family: 'Rajdhani', sans-serif;">Tareas asigandas</span>
+								</h5>
+								     <div>
+								     	<a href=""><i class="fas fa-file-word" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-excel" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-powerpoint" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-pdf" style="font-size: 40px; color: black;"></i></a>
+								     	<a href=""><i class="fas fa-file-video" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-plus-circle" style="font-size: 50px; color: blue;"></i></a>
+								     </div>
+								    
+								<br>
+								<br>
+								</div>
+								</div>
+
+							</div>
+						<!----------------------------------------------------------------------------------------------------------------------------------------->
+
+						<div class="col-sm-12">
+								<div class="media border p-3">
+
+								<div class="container col-sm-5">
+								<div class="titulo">
+								<h1 class="display-3">
+								<span style="color:#1169a3; font-family: 'Rajdhani', sans-serif; font-size: 40px;">GRUPO 2</span>
+								</h1> 
+								<br>
+								<br>
+								</div>
+								</div>
+
+								<div class="media-body col-sm-7">
+								     <h5 class="">
+
+								<span style="color:#1169a3; font-family: 'Rajdhani', sans-serif;">Tareas asigandas</span>
+								</h5>
+								     <div style="text-align: left;">
+								     	<a href=""><i class="fas fa-file-word" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-excel" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-powerpoint" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-pdf" style="font-size: 40px; color: black;"></i></a>
+								     	<a href=""><i class="fas fa-file-video" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-plus-circle" style="font-size: 50px; color: blue;"></i></a>
+								     </div>
+								    
+								<br>
+								<br>
+								</div>
+								</div>
+
+							</div>
+						<!----------------------------------------------------------------------------------------------------------------------------------------->					
+					</div>
+
 				</div>
+				
+			</div>
 
-				<!---alt="John Doe"-->
-			<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------> 
+
+
+
+
+
+
 	</section>
 	<br>
 	
@@ -154,7 +400,7 @@
 			</div>
 			<div>
 				<span>
-					<p>ESCOMpartir ©2018 | <a href="acercade.html"> Acerca de...</a> | <a href="">Trabajos</a> | <a href="">Centro de Noticias</a> | <a href="">Constactanos</a> | <a href="">Profesores</a> | <a href="">Comunidad</a> | <a href="">Blog</a> | <a href="">Privacidad</a> | <a href="">Terminos de Servicios</a> | <a href="">Idioma</a></p>	
+					<p>ESCOMpartir ©2018 |</p>	
 				</span>
 				
 			</div>
