@@ -211,7 +211,7 @@ footer{
 	color: #fff;
 	background-color: #000;
 	border-color: #E04727;
-	padding: 2rem 1rem
+	padding: 1em 1em
 
 }
 
@@ -252,9 +252,17 @@ div#fecha1{
 .p-5{
 	background-color: #D5D8DC;
 }
+
 .col-xs-2{
 	font-family:'Montserrat', sans-serif;
 	font-size: 2rem;
+	border-color: #E04727;
+	padding: 2rem;
+}
+
+.col-xs-1{
+	font-family:'Montserrat', sans-serif;
+	font-size: 1rem;
 	border-color: #E04727;
 	padding: 2rem;
 	
@@ -340,3 +348,15 @@ div#fecha1{
 	padding: 5px;
 	
 }
+
+.lista-tareas{
+	overflow-x: auto;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
