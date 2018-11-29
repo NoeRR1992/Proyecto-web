@@ -3,23 +3,34 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Editar Perfil</title>
-		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="assets/css/index.css">
 		<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<!--<link rel="stylesheet" href="http://localhost:81/bootstrap-4.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://localhost:81/iconfont/css/all.css">-->
 	</head>
 	<body>
-
-	<header>
+		
+		<header>
 			<nav>
 				<div class="logos">
 					<p style="margin: 0; color:#F9F9F9;"><span style="font-family: 'Rajdhani', sans-serif; font-size: 1.5em;"> ESCOM</span>partiendo</p>
 				</div>
 				<ul>
-					<li><a href="index.html"><i class="fas fa-home" style="font-size: 30px; color: white"></i></a></li>
-					<li><a href="#"><i class="fas fa-comment" style="font-size: 30px; color: white"></i></a></li>
-					<li><a href="#"><i class="fas fa-user-circle" style="font-size: 30px; color: white"></i></a></li>
+					<li><a href="index.html"><p><i class="fas fa-home" style="font-size: 30px; color: white"></i></p></a></li>
+					<li><a href="#"><p><i class="fas fa-comment" style="font-size: 30px; color: white"></i></p></a></li>
+					<li id="info_usuario">
+						<!--<a href="#" class="usuario_info">
+							<img src="images/user_1.jpg" alt="Imagen usuario" width="40">
+							<p id="nombre_usuario">Nombre Usuario</p>
+							<p><i class="fas fa-edit" style="font-size: 30px; color: white"></i></p>
+						</a>-->
+					</li>
+					<li>
+						<a id="cerrar_sesion"><p><i class="fas fa-sign-out-alt" style="font-size: 30px; color: white"></i></p></a>
+					</li>
 					
 				</ul>
 				
@@ -59,7 +70,7 @@
 								</div>
 								<div class="form-group col-3">
 									<label for="">Confirmar Contraseña:</label>
-									<input type="password" class="form-control" placeholder="Escribe tu nueva contraseña" name="confirmar_contrasena_nueva" id="confirmar_contrasena_nueva1" pattern="[0-9a-zA-Z\*\+ ]{3,8}" title="Longitud de 3 a 8 caracteres, letras minúsculas y mayúsculas, números y * ó +" required>
+									<input type="password" class="form-control" placeholder="Confirma contraseña" name="confirmar_contrasena_nueva" id="confirmar_contrasena_nueva1" pattern="[0-9a-zA-Z\*\+ ]{3,8}" title="Longitud de 3 a 8 caracteres, letras minúsculas y mayúsculas, números y * ó +" required>
 								</div></p>
 								<div class="form-group col-3">
 									<label for="">Nombre(s):</label>
@@ -86,7 +97,7 @@
 									<input type="text" class="form-control" name="curp" pattern="^[A-Z]{4}\d{2}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])[A-Z]{6}(\d|[A-Z])\d$" placeholder="AAAA000101BBBBBB00" required>
 									<a href="https://www.gob.mx/curp/" target="_blank">Consultar CURP</a>
 								</div>
-								
+
 								<div class="col-ms-5 media-body" style="padding: 1rem;">
 									<span class="btn btn-default btn-file">
 					    				<h3 class="border p-2 ">Cambiar foto</h3> <input class="form-control" type="file">
@@ -134,8 +145,10 @@
 			<footer>
 				<div>
 					<p>
-					<a href="https://twitter.com/escomunidad?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3Aescomunidad&ref_url=http%3A%2F%2Fwww.isc.escom.ipn.mx%2F"><i class="fab fa-twitter" style="color: white; font-size: 40px; padding: 1rem;"></i></a>	
-					<a href="https://www.facebook.com/escomipnmx/"><i class="fab fa-facebook-f" style="color: white; font-size: 40px; padding: 1rem;"></i></a>
+					<a href="https://twitter.com/escomunidad?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3Aescomunidad&ref_url=http%3A%2F%2Fwww.isc.escom.ipn.mx%2F"><i class="fab fa-twitter-square" style="color: white; font-size: 40px; padding: 5px;"></i></a>	
+					<a href="https://www.facebook.com/escomipnmx/"><i class="fab fa-facebook-square" style="color: white; font-size: 40px; padding: 5px;"></i></a>
+					
+					
 					ESCOMpartir ©2018 |</p>	
 				</div>					
 			</footer>			
@@ -144,8 +157,8 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-		<!--<script src="bootstrap-4.1.1/js/bootstrap.min.js"></script>-->
-		<script src="index.js"></script>
+		<!--<script src="http://localhost:81/bootstrap-4.1.1/js/bootstrap.min.js"></script>-->
+		<script src="asset/js/administrador.js"></script>
 
 	</body>
 </html>
