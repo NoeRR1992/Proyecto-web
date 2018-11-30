@@ -4,14 +4,10 @@
 		<meta charset="utf-8">
 		<title>Archivos Guardados</title>
 		<link rel="stylesheet" href="index.css">
-		<!--link rel="stylesheet" href="assets/css/index.css"-->
 		<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-		<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">-->
-		<link rel="stylesheet" href="http://localhost:81/bootstrap-4.1.1/css/bootstrap.min.css">
-		<link rel="stylesheet" href="http://localhost:81/iconfont/css/all.css">
-
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	</head>
 	<body>
 <!---------------------------------------------------------------------------------------------->
@@ -42,9 +38,70 @@
 					<br>
 				</div>
 			</div>
-					<!---------------------------------------------------------------------------------------------->
 
-					<div class="justify-content-center row">
+<!------------------------------------------------------------------------------------------------------------------>
+						<div class="row justify-content-center">
+							
+
+							<div class="col-xs-1">
+								<label for="ex1">Profesor</label>
+									<select class="form-control" style="background: #e9ecef; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+										<option name="lista" value="grupo1">Profesor 1</option>
+										<option name="lista" value="grupo2">Profesor 2</option>
+									</select>	
+								
+							</div>
+
+							<div class="col-xs-1">
+								<label for="ex1">Grupo</label>
+									<select class="form-control" style="background: #e9ecef; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+										<option name="lista" value="grupo1">Grupo 1</option>
+										<option name="lista" value="grupo2">Grupo 2</option>
+									</select>	
+								
+							</div>
+
+							<div class="col-xs-1">
+								<label for="ex1">Unidad de aprendizaje</label>
+									<select class="form-control" style="background: #e9ecef; font-family: 'Montserrat', sans-serif; ">
+										<option name="lista" value="grupo1">materia 1</option>
+										<option name="lista" value="grupo2">materia 2</option>
+									</select>	
+								
+							</div>
+
+							<div class="col-xs-1">
+								<label for="ex1">Tipo de archivo</label>
+									<select class="form-control" style="background: #e9ecef; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+										<option name="lista" value="grupo1">Tipo 1</option>
+										<option name="lista" value="grupo2">Tipo 2</option>
+									</select>	
+								
+							</div>
+
+							<div class="col-xs-1">
+								<label for="ex1">Fecha de asigación</label>
+									<input type="file" class="form-control" style="background: #e9ecef; font-family: 'Montserrat', sans-serif; font-size: 14px;">	
+								
+							</div>	
+							
+							<div class="col-xs-12">
+								<label for="ex1" style="font-size: 18px;">Nombre del archivo</label>
+								<input class="form-control" id="ex1" type="text">
+								<div style="padding: 1rem;">
+									<a href="#" class="btn btn_red btn-lg">Buscar</a>
+								</div>
+							</div>
+
+							
+							
+						</div>
+
+<!------------------------------------------------------------------------------------------------------------------>
+
+
+
+							<div class="justify-content-center row">
 								<div class="col-sm-5 border">
 									<h1 class="display-3" style="text-align: center;">
 										<span style="color:#1169a3; font-family: 'Rajdhani', sans-serif; font-size: 40px;">ARCHIVOS</span>
@@ -73,19 +130,11 @@
 
 
 									<!------------------------------------------------------------------------------------------------------------>
-									<div class="lista-tareas" >
-										<a href=""><i class="fas fa-file-word" style="font-size: 140px; color: black;"></i>archivo 4</a>
-										<a href=""><i class="fas fa-file-excel" style="font-size: 140px; color: black;"></i>archivo 4</a>
-										<a href=""><i class="fas fa-file-powerpoint" style="font-size: 140px; color: black;"></i>archivo 4</a>
-										<a href=""><i class="fas fa-file-pdf" style="font-size: 140px; color: black;"></i>archivo 4</a>
-										<a href=""><i class="fas fa-file-video" style="font-size: 140px; color: black;"></i>archivo 5</a>
-										<a href=""><i class="fas fa-file-word" style="font-size: 140px; color: black;"></i>archivo 6</a>
-										<a href=""><i class="fas fa-file-excel" style="font-size: 140px; color: black;"></i>archivo 1</a>
-										<a href=""><i class="fas fa-file-powerpoint" style="font-size: 140px; color: black;"></i>archivo 1</a>
-										<a href=""><i class="fas fa-file-pdf" style="font-size: 140px; color: black;"></i>archivo 1</a>
-										<a href=""><i class="fas fa-file-video" style="font-size: 140px; color: black;"></i>archivo 1</a>
-										<a href=""><i class="fas fa-plus-circle" style="font-size: 140px; color: #1169a3;"></i>archivo 1</a>
-									</div>
+									<ul class="list-group">
+									  	<li class="list-group-item">Archivo 1<a href=""><i class="fas fa-arrow-circle-down" style="font-size: 40px;"></i></a></li>
+									  	<li class="list-group-item">Archivo 2<a href=""><i class="fas fa-arrow-circle-down" style="font-size: 40px;"></i></a></li>
+									  	<li class="list-group-item">Archivo 3<a href=""><i class="fas fa-arrow-circle-down" style="font-size: 40px;"></i></a></li>
+									</ul>
 										
 
 											
@@ -154,30 +203,33 @@
 								</div>								
 							</div>
 					<!---------------------------------------------------------------------------------------------->
+
+					
+					<!---------------------------------------------------------------------------------------------->
+
+					
+					<!---------------------------------------------------------------------------------------------->
 					
 					
 
-
-
-<!--pie de pagina-->
-		<section class="pie">
-			<footer>
-				<div>
-					<p>
-					<a href="https://twitter.com/escomunidad?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3Aescomunidad&ref_url=http%3A%2F%2Fwww.isc.escom.ipn.mx%2F"><i class="fab fa-twitter-square" style="color: white; font-size: 40px; padding: 5px;"></i></a>	
-					<a href="https://www.facebook.com/escomipnmx/"><i class="fab fa-facebook-square" style="color: white; font-size: 40px; padding: 5px;"></i></a>
-					
-					
-					ESCOMpartir ©2018 |</p>	
-				</div>					
-			</footer>			
-		</section>
-
+<br>
+<br>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<!--<script src="bootstrap-4.1.1/js/bootstrap.min.js"></script>-->
 	<script src="index.js"></script>
+<!--pie de pagina-->
+		<section class="pie">
+			<footer>
+				<div>
+					<p>
+					<a href="https://twitter.com/escomunidad?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3Aescomunidad&ref_url=http%3A%2F%2Fwww.isc.escom.ipn.mx%2F"><i class="fab fa-twitter" style="color: white; font-size: 40px; padding: 1rem;"></i></a>	
+					<a href="https://www.facebook.com/escomipnmx/"><i class="fab fa-facebook-f" style="color: white; font-size: 40px; padding: 1rem;"></i></a>
+					ESCOMpartir ©2018 |</p>	
+				</div>					
+			</footer>			
+		</section>
 
 	</body>
 </html>

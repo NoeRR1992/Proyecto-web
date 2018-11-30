@@ -13,125 +13,569 @@
 	<header>
 		<nav>
 			<div class="logos">
-				<p style="margin: 0; color:#F9F9F9;"><span style="font-family: 'Rajdhani', sans-serif; font-size: 1.5em;"><img src="admin.png" width="40"> ESCOM</span>partiendo</p>
+				<p style="margin: 0; color:#F9F9F9;"><span style="font-family: 'Rajdhani', sans-serif; font-size: 1.5em;"> ESCOM</span>partiendo</p>
 			</div>
 			<ul>
-				<li><a href="index.html" ><p><img src="inicio.svg" width="40"></p></a></li>
-				<li><a href="#" ><p><img src="imagen2.svg" width="40"> </p></a></li>
-				<li><a href="#" ><p><img src="archivo.svg" width="40"></p></a></li>
-				
-			</ul>
-			
+				<li><a href="index.html"><i class="fas fa-home" style="font-size: 30px; color: white"></i></a></li>
+				<li><a href="#"><i class="fas fa-comment" style="font-size: 30px; color: white"></i></a></li>
+				<li><a href="#"><i class="fas fa-user-circle" style="font-size: 30px; color: white"></i></a></li>				
+			</ul>			
 		</nav>
 	</header>
 
 
 	<section class="contenedor">
-
-		<div class="container">
-			
+		<div class="container">			
 			<div class="inicio row justify-content-center" id="inicio">
-
 				<div class="titulo">
 					<h1 class="display-3">
 						<span style="color:#1169a3; font-family: 'Rajdhani', sans-serif; font-size: 1.5em;">Profesor</span>
 					</h1>
 					<br>
 					<br>
-				</div>
+				</div>				
 
 				<div class="botones_inicio row justify-content-around">
-					<div class="col-sm-3">
-						<a href="#alumno" class="btn btn_red btn-lg">Crear grupo</a>
-					</div>
-					<div class="col-sm-3">
-						<a href="#alumno" class="btn btn_red btn-lg">Eliminar grupo</a>
-					</div>
-					<div class="col-sm-3">
-						<a href="#alumno" class="btn btn_red btn-lg">Subir archivo</a>
-					</div>
-					<div class="col-sm-3">
-						<a href="#alumno" class="btn btn_red btn-lg">Eliminar archivo</a>
-					</div>
-					<div>
-						<h3 background="F9F9F9">Fecha de entrega</h3>
-						<input type="date" name="birthday" required="or" />
-					</div>
-				</div>	
+					<div class="col-sm-2">
+						<!--modal crear grupo-->
+						<a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn_red btn-lg" id="Crear"> Crear grupo</a>
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  						<div class="modal-dialog" role="document">
+	    						<div class="modal-content">
+		      						<div class="modal-header">
+		        						<h5 class="modal-title" id="exampleModalLabel"> Crear grupo</h5>
+		        						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          						<span aria-hidden="true">&times;</span>
+		        						</button>
+		      						</div>
 
-				<div class="position-absolute" style="bottom: 20px;">
-					<div class="col-12 mt-5 ">
-						<a href="#profesor" class="no_link" >Bajar</a>
+		      						<div class="modal-body">
+		        						<form>
+					  						<div class="form-group">
+					  							<label for="exampleModalLabel">Nombre de materia</label>
+					  							<input type="text" class="form-control" id="exampleInputtext" aria-describedby="emailHelp">		
+					  						</div>
+					  						<div class="form-group">
+					    						<label for="exampleInputtext">Nombre del Profesor</label>
+					    						<input type="text" class="form-control" id="exampleInputtext1">
+					  						</div>
+					  						<button type="submit" class="btn btn-primary">Crear</button>
+										</form>
+		     						</div>
+		      						<div class="modal-footer">
+		        						<span>Me equivoque <a href="#registro" id="btnregistro">Editar grupo</a></span>
+		      						</div>
+	    						</div>
+	  						</div>
+						</div>
 					</div>
-					<div class="col-12">
-						<a href="#compartir" class="no_link"><i class="fas fa-chevron-down"></i></a>
+					<!--modal Eliminar grupo-->
+					
+					<div class="col-sm-2">
+						<a href="#" data-toggle="modal" data-target="#exampleModal4" class="btn btn_red btn-lg" id="Eliminar">Editar grupo</a>
+						<div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  						<div class="modal-dialog" role="document">
+	    						<div class="modal-content">
+		      						<div class="modal-header">
+		        						<h5 class="modal-title" id="exampleModalLabel">Editar Grupo</h5>
+		        						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          						<span aria-hidden="true">&times;</span>
+		        						</button>
+		      						</div>
+
+		      						<div class="modal-body">
+		        						<form>
+					  						<div class="form-group">
+					  							<label>Nombre de grupo</label>
+					  							<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">			    						
+					  						</div>
+					  						<div class="form-group">
+					    						<label>Nombre de asignatura</label>
+					    						<input type="text" class="form-control" id="exampleInputtext" placeholder="">			
+					  						</div>
+				  							<button type="submit" class="btn btn-primary">Eliminar</button>
+										</form>
+		     						</div>
+	      							<div class="modal-footer">
+	        							<span>Me equivoque <a href="#registro" id="btnregistro">Deshacer</a></span>
+	      							</div>
+	    						</div>
+	  						</div>
+						</div>
+					</div>
+
+					<div class="col-sm-2">
+						<a href="#" data-toggle="modal" data-target="#exampleModal1" class="btn btn_red btn-lg" id="Eliminar">Eliminar grupo</a>
+						<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  						<div class="modal-dialog" role="document">
+	    						<div class="modal-content">
+	      							<div class="modal-header">
+		        						<h5 class="modal-title" id="exampleModalLabel">Eliminar Grupo</h5>
+		        						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          						<span aria-hidden="true">&times;</span>
+		        						</button>
+		      						</div>
+		      						<div class="modal-body">
+		        						<form>
+					  						<div class="form-group">
+					  							<label for="exampleModalLabel1">Nombre de materia</label>
+					  							<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">	
+					  						</div>
+					  						<div class="form-group">
+					    						<label>Nombre del Profesor</label>
+					    						<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Juan Perez León">			
+					  						</div>
+					  						<button type="submit" class="btn btn-primary">Eliminar</button>
+										</form>
+		     						</div>
+		      						<div class="modal-footer">
+		        						<span>Me equivoque <a href="#registro" id="btnregistro">Deshacer</a></span>
+		      						</div>
+	    						</div>
+	  						</div>
+						</div>
+					</div>
+					<!--Subir archivo-->
+					<div class="col-sm-2">
+						<a href="creartarea.html " class="btn btn_red btn-lg" id="Subir">Crear tarea</a>
+					</div>
+
+					<!--modal crear Eliminar archivo-->
+					<div class="col-sm-2">
+						<a href="#" data-toggle="modal" data-target="#exampleModal2" class="btn btn_red btn-lg" id="Eliminar1">Eliminar archivo</a>
+						<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+						  	<div class="modal-dialog" role="document">
+						    	<div class="modal-content">
+						      		<div class="modal-header">
+						        		<h5 class="modal-title" id="exampleModalLabel2">Eliminar Archivo</h5>
+						        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          			<span aria-hidden="true">&times;</span>
+						        		</button>
+						      		</div>
+
+						      	<div class="modal-body">
+						        	<form>
+									  	<div class="form-group">
+									    	<label>Nombre del archivo</label>
+									    	<input type="text" class="form-control" id="exampleInputtext" aria-describedby="emailHelp" placeholder="">
+									  	</div>
+									  	<div class="form-group">
+									    	<label>Tipo de archivo</label>
+									    	<input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+											<br>
+											<a href="#registro" id="btnregistro">Me equivoque</a>									
+									  	</div>
+									  	<button type="submit" class="btn btn-primary">Deshacer</button>
+									</form>
+						    	</div>
+						    </div>
+						</div>
 					</div>
 				</div>
+				<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+				<br>
+				<br>
+				<form>
+					<div class="form-group row">
+						<div class="col-xs-1">
+							<br>
+							<br>
+						    <label>Ingresar grupo</label>
+						    <input class="form-control" id="ex1" type="text">
+						</div>
+					</div>
+				</form>
+					
 			</div>	
+					<br>
+					<br>
+				<div class="position-absolute" style="bottom: 20px;">
+					<div class="col-12 mt-5 ">
+						<a href="#profesor" class="no_link" >Bajar</a><br>
+					</div>
+					<div class="col-12">
+						<a href="#check1" class="no_link"><i class="fas fa-chevron-down"></i></a>
+					</div>
+				</div>
+		</div>		  
+
+			<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+			<div class="container">
+				<div class="titulo">
+					<h1 class="display-3">
+						<span style="color:#1169a3; font-family: 'Rajdhani', sans-serif; font-size: 1.5em;">Grupos</span>
+					</h1>
+					<br>
+					<br>
+				</div>
+			</div>
+<!------------------------------------------------------------------------------------------------------------>
+
+			<div class="col-sm-12" id="Misgrupos">
+							<h1 class="display-3" style="text-align: center;">
+								<span style="color:#1169a3; font-family: 'Rajdhani', sans-serif; font-size: 40px;">MIS GRUPOS</span>
+							</h1>
+							<div class="row">
+								<div class="col-sm-6 border">
+									<h1 class="display-3" style="text-align: center;">
+										<span style="color:#1169a3; font-family: 'Rajdhani', sans-serif; font-size: 40px;">GRUPOS </span>
+									</h1>
+
+									<label for="ex1">Mis grupos</label>
+									<select class="form-control" style="background: #e9ecef; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+										<option name="lista" value="grupo1">Grupo 1</option>
+										<option name="lista" value="grupo2">Grupo 2</option>
+										<option name="lista" value="grupo3">Grupo 3</option>
+									</select>
+
+									<div>
+										<h1 class="display-3" style="text-align: center;">
+											<span style="color:#1169a3; font-family: 'Rajdhani', sans-serif; font-size: 30px;">Unidades de aprendizaje</span>
+										</h1>
+
+									</div>	
+
+									<label for="ex1">U. de aprendizaje</label>
+									<select class="form-control" style="background: #e9ecef; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+										<option name="lista" value="grupo1">UA 1</option>
+										<option name="lista" value="grupo2">UA 2</option>
+										<option name="lista" value="grupo3">UA 3</option>
+									</select>
+
+									<div>
+										<h1 class="display-3" style="text-align: center;">
+											<span style="color:#1169a3; font-family: 'Rajdhani', sans-serif; font-size: 30px;">Grupo/Tareas</span>
+										</h1>
+
+									</div>	
+
+									<!------------------------------------------------------------------------------------------------------------>
+									<div class="lista-tareas" >
+										<a href=""><i class="fas fa-file-word" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-excel" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-powerpoint" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-pdf" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-video" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-word" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-excel" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-powerpoint" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-pdf" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-video" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-word" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-excel" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-powerpoint" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-pdf" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-video" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-word" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-excel" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-powerpoint" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-pdf" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-file-video" style="font-size: 40px; color: black;"></i></a>
+										<a href=""><i class="fas fa-plus-circle" style="font-size: 50px; color: #1169a3;"></i></a>
+									</div>
+										
+
+											
+									
+
+									<!------------------------------------------------------------------------------------------------------------>
+									
+									<div class="col-sm-2">
+												<br><a href="#" data-toggle="modal" data-target="#exampleModal12" class="btn btn_red btn-lg" id="Eliminar">Eliminar alumno</a><br><br>
+												<div class="modal fade" id="exampleModal12" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							  						<div class="modal-dialog" role="document">
+							    						<div class="modal-content">
+							      							<div class="modal-header">
+								        						<h5 class="modal-title" id="exampleModalLabel">Eliminar alumno</h5>
+								        						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								          						<span aria-hidden="true">&times;</span>
+								        						</button>
+								      						</div>
+								      						<div class="modal-body">
+								        						<form>
+								        							<div class="form-group">
+											  							<label for="exampleModalLabel1">Grupo</label>
+											  							<select class="form-control" placeholder="Grupos" style="background: #e9ecef; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+																			<option name="lista" value="grupo1" placeholder="Grupos">Grupo 1</option>
+																			<option name="lista" value="grupo2">Grupo 2</option>
+																		</select>	
+											  						</div>
+											  						<div class="form-group">
+											  							<label for="exampleModalLabel1">Unidad de aprendizaje</label>
+											  							<select class="form-control" placeholder="Grupos" style="background: #e9ecef; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+																			<option name="lista" value="grupo1" placeholder="Grupos">UA 1</option>
+																			<option name="lista" value="grupo2">UA 2</option>
+																		</select>	
+											  						</div>
+											  						<div class="form-group">
+											  							<label for="exampleModalLabel1">Alumno</label>
+											  							<select class="form-control" placeholder="Grupos" style="background: #e9ecef; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+																			<option name="lista" value="grupo1" placeholder="Grupos">Alumno 1</option>
+																			<option name="lista" value="grupo2">Alumno 2</option>
+																		</select>	
+											  						</div>
+											  						<button type="submit" class="btn btn-primary" style="background: #E31434;">Eliminar</button>
+																</form>
+								     						</div>
+								      						
+							    						</div>
+							  						</div>
+												</div>
+											</div>
+
+								</div>
+
+								<div class="col-sm-6 border">
+									<h1 class="display-3" style="text-align: center;">
+										<span style="color:#1169a3; font-family: 'Rajdhani', sans-serif; font-size: 40px;">Alumnos inscritos</span>
+									</h1>
+
+									<ul class="list-group">
+									  	<li class="list-group-item">Alumno 1</li>
+									  	<li class="list-group-item">Alumno 2</li>
+									  	<li class="list-group-item">Alumno 3</li>
+									</ul>
+
+								</div>								
+							</div>
+						</div>
+<!------------------------------------------------------------------------------------------------------------>
+			<div class="col-sm-12" id="evaluacion" style="padding: 2rem;">
+							<h1 class="display-3" style="text-align: center;">
+								<span style="color:#1169a3; font-family: 'Rajdhani', sans-serif; font-size: 40px;">EVALUACIONES</span>
+							</h1>
+							<div class="row">
+								<div class="col-sm-6 border">
+									<h1 class="display-3" style="text-align: center;">
+										<span style="color:#1169a3; font-family: 'Rajdhani', sans-serif; font-size: 40px;">Evaluar tareas</span>
+									</h1>
+
+									<label for="ex1">Grupos</label>
+									<select class="form-control" style="background: #e9ecef; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+										<option name="lista" value="grupo1">Grupo 1</option>
+										<option name="lista" value="grupo2">Grupo 2</option>
+										<option name="lista" value="grupo3">Grupo 3</option>
+									</select>
+
+									<label for="ex1">U. Aprendizaje</label>
+									<select class="form-control" style="background: #e9ecef; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+										<option name="lista" value="grupo1">UA 1</option>
+										<option name="lista" value="grupo2">UA 2</option>
+										<option name="lista" value="grupo3">UA 3</option>
+									</select>
+
+									<label for="ex1">Nombre de tarea</label>
+									<select class="form-control" style="background: #e9ecef; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+										<option name="lista" value="grupo1">Tarea 1</option>
+										<option name="lista" value="grupo2">Tarea 2</option>
+										<option name="lista" value="grupo3">Tarea 3</option>
+									</select>
+
+									<label for="ex1">Nombre de alumno</label>
+									<select class="form-control" style="background: #e9ecef; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+										<option name="lista" value="grupo1">Alumno 1</option>
+										<option name="lista" value="grupo2">Alumno 2</option>
+										<option name="lista" value="grupo3">Alumno 3</option>
+									</select>	
+
+									<div>
+										<h1 class="display-3" style="text-align: center;">
+											<span style="color:#1169a3; font-family: 'Rajdhani', sans-serif; font-size: 30px;">Nombre de tarea/<span style="text-align: right;;">Calificación</span></span>
+										</h1>
+
+									</div>	
+
+									<!------------------------------------------------------------------------------------------------------------>
+									
+
+									<ul class="list-group" style="padding: 1rem;">
+									  	<li class="list-group-item d-flex justify-content-between align-items-center">
+									    Tarea 1									    	
+									    	<span class="badge badge-primary badge-pill">10</span>
+									  	</li>
+									  	<li class="list-group-item d-flex justify-content-between align-items-center">
+									    Tarea 2
+									    	<span class="badge badge-primary badge-pill">9</span>
+									  	</li>
+									  	<li class="list-group-item d-flex justify-content-between align-items-center">
+									    Tarea 3
+									    	<span class="badge badge-primary badge-pill">8</span>
+									  	</li>
+									</ul>
+
+									<ul class="list-group" style="padding: 1rem;">
+									  	<li class="form-control">
+									    Tarea 1									    	
+									    	<span class="">
+									    		10<br><a href="#" data-toggle="modal" data-target="#exampleModal16" class="btn btn_red btn-lg" id="Eliminar">Evaluar</a><br><br>
+												<div class="modal fade" id="exampleModal16" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							  						<div class="modal-dialog" role="document">
+							    						<div class="modal-content">
+							      							<div class="modal-header">
+								        						<h5 class="modal-title" id="exampleModalLabel">Evaluar</h5>
+								        						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								          						<span aria-hidden="true">&times;</span>
+								        						</button>
+								      						</div>
+								      						<div class="modal-body">
+								        						<form>
+								        							<div class="form-group">
+											  							<label for="exampleModalLabel1">Calificación</label>
+											  							<select class="form-control" placeholder="Grupos" style="background: #e9ecef; font-family: 'Montserrat', sans-serif; font-size: 14px;">
+																			<option name="lista" value="grupo1">1</option>
+																			<option name="lista" value="grupo2">2</option>
+																			<option name="lista" value="grupo2">3</option>
+																			<option name="lista" value="grupo2">4</option>
+																			<option name="lista" value="grupo2">5</option>
+																			<option name="lista" value="grupo2">6</option>
+																			<option name="lista" value="grupo2">7</option>
+																			<option name="lista" value="grupo2">8</option>
+																			<option name="lista" value="grupo2">9</option>
+																			<option name="lista" value="grupo2">10</option>
+																		</select>	
+											  						</div>
+											  						
+											  						<button type="submit" class="btn btn-primary" style="background: #E31434;">Calificar</button>
+																</form>
+								     						</div>
+								      						
+							    						</div>
+							  						</div>
+												</div>
+											</div>
+											</span>
+									  	</li>
+									  	<li class="list-group-item d-flex justify-content-between align-items-center">
+									    Tarea 2
+									    	<span class="">
+									    		<div class="container">
+												    <h2>Fading Modal</h2>
+												    <p>Add the "fade" class to the modal container if you want the modal to fade in on open and fade out on close.</p>
+
+												  <!-- Button to Open the Modal -->
+												    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+												    Abrir modal
+												    </button>
+
+												    <!-- The Modal -->
+												    <div class="modal fade" id="myModal">
+												      <div class="modal-dialog">
+												        <div class="modal-content">
+												      
+												          <!-- Modal Header -->
+												          <div class="modal-header">
+												            <h4 class="modal-title">Modal Heading</h4>
+												            <button type="button" class="close" data-dismiss="modal">&times;</button>
+												          </div>
+												        
+												          <!-- Modal body -->
+												          <div class="modal-body">
+												            Modal body..
+												          </div>
+
+												        <div class="form-group">
+																	<label for="exampleModalLabel1">Calificación</label>
+																	<select class="form-control" placeholder="Grupos" style="background: #e9ecef; font-family: 'Montserrat', sans-seri14px;">
+												  					<option name="lista" value="grupo1">1</option>
+												  					<option name="lista" value="grupo2">2</option>
+												  					<option name="lista" value="grupo2">3</option>
+												  					<option name="lista" value="grupo2">4</option>
+												  					<option name="lista" value="grupo2">5</option>
+												  					<option name="lista" value="grupo2">6</option>
+												  					<option name="lista" value="grupo2">7</option>
+												  					<option name="lista" value="grupo2">8</option>
+												  					<option name="lista" value="grupo2">9</option>
+												  					<option name="lista" value="grupo2">10</option>
+																  </select>	
+																</div>
+																							  						
+																<button type="submit" class="btn btn-primary" style="background: #E31434;">Calificar</button>
+												        <!-- Modal footer -->
+												        <div class="modal-footer">
+												          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+												        </div>        
+												      </div>
+												    </div>
+												  </div>  
+												</div>
+									    	</span>
+									  	</li>
+									  	<li class="list-group-item d-flex justify-content-between align-items-center">
+									    Tarea 3
+									    	<span class="badge badge-primary badge-pill">8</span>
+									  	</li>
+									</ul>
+										
+
+											
+									
+
+									<!------------------------------------------------------------------------------------------------------------>
+									
+									
+
+								</div>
+
+								<div class="col-sm-6 border">
+									<h1 class="display-3" style="text-align: center;">
+										<span style="color:#1169a3; font-family: 'Rajdhani', sans-serif; font-size: 40px;">Enviar comentario</span>
+									</h1>
+
+									<div class="justify-content-center">
+										<div style="padding: 1rem;">										
+											<input class="form-control" type="multitareas" name="" placeholder="Escribe un comentario..." style="padding: 2rem;">	
+										</div>
+
+										<div>
+											<button type="submit" class="btn btn-primary" style="background: #E31434;">Enviar</button>
+										</div>
+									</div>
+
+									
+
+									
+									
+
+								</div>								
+							</div>
+						</div>
+<!------------------------------------------------------------------------------------------------------------>
+
+
+			
+
+
 				
-			<div id="alumno" class="compartir">
-				<div class="jumbotron jumbotron-fluid w-100">
-				  <div class="container justify-content-center">
-				    <br>
-				    <br>
-				    <p class="lead"><img src="profe.png" width="50" > CSS </p>
-				    <div class="w-100 mt-2"></div>
-				  </div> 
-				</div>    
-			</div>	    
+
+				<!---alt="John Doe"-->
+			<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------>  
 				  
-			<div id="alumno" class="compartir">
-				<div class="jumbotron jumbotron-fluid w-100">
-				  <div class="container justify-content-center">
-				    <br>
-				    <br>
-				    <p class="lead"><img src="profe.png" width="50" > HTML5 </p>
-				    <div class="w-100 mt-2"></div>
-				  </div> 
-				</div>    
-			</div>
+			
 
-			<div id="alumno" class="compartir">
-				<div class="jumbotron jumbotron-fluid w-100">
-				  <div class="container justify-content-center">
-				    <br>
-				    <br>
-				    <p class="lead"><img src="profe.png" width="50" > JAVASCRIP </p>
-				    <div class="w-100 mt-2"></div>
-				  </div> 
-				</div>    
-			</div>
+				<!---alt="John Doe"-->
+			<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------> 
 
-			<div id="alumno" class="compartir">
-				<div class="jumbotron jumbotron-fluid w-100">
-				  <div class="container justify-content-center">
-				    <br>
-				    <br>
-				    <p class="lead"><img src="profe.png" width="50" > BOOTSTRAP </p>
-				    <div class="w-100 mt-2"></div>
-				  </div> 
-				</div>    
-			</div>	
-
-			<div id="alumno" class="compartir">
-				<div class="jumbotron jumbotron-fluid w-100">
-				  <div class="container justify-content-center">
-				    <br>
-				    <br>
-				    <p class="lead"><img src="profe.png" width="50" > CSS3 </p>
-				    <div class="w-100 mt-2"></div>
-				  </div> 
-				</div>    
-			</div>		
+			
+				
+			<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------> 		
 		</div>		 
 	</section>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<!--<script src="bootstrap-4.1.1/js/bootstrap.min.js"></script>-->
+	<script src="index.js"></script>
 				
-	<section class="contenedor">
+	<section class="pie">
 		<footer>
-			<img src="twiter.png" width="40">
-			<img src="facebook.png" width="40">
-			<p>ESCOMpartir ©2018 | Acerca de... | Trabajos | Centro de Noticias | Constactanos | Profesores | Comunidad | Blog | Privacidad | Terminos de Servicios | Idioma</p>
-		</footer>
+			<div>
+				<p>
+				<a href="https://twitter.com/escomunidad?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3Aescomunidad&ref_url=http%3A%2F%2Fwww.isc.escom.ipn.mx%2F"><i class="fab fa-twitter" style="color: white; font-size: 40px; padding: 1rem;"></i></a>	
+				<a href="https://www.facebook.com/escomipnmx/"><i class="fab fa-facebook-f" style="color: white; font-size: 40px; padding: 1rem;"></i></a>
+				ESCOMpartir ©2018 |</p>	
+			</div>					
+		</footer>			
 	</section>
 </body>
 </html>

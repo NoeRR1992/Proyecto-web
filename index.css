@@ -101,9 +101,7 @@ div > h2 > p > img{
 
 }
 
-.add img, .word img, .excel, .mp4 img, .pdf img, .powerpoint img{
-	display: inline-block;
-     font-size: inherit;
+
 }
 .user{
 	align-items: right;
